@@ -1,30 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentacion grupo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Guía de Git con SourceForge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(120deg, #2c3e50, #4a69bd);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: #4a69bd;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card-body ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+        
+        .card-body li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .card-body li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #4a69bd;
+        }
+        
+        .command-box {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #4a69bd;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+        
+        .note {
+            background: #fff9e6;
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
 <body>
-  <h3>Proyecto de Pagina web</h3>
-  <p>GRUPO : Dibujitos</p>
-
-  <p>INTEGRANTES:</p>
-  <ul>
-    <li>Oscar Ailthoon Espinoza Nieto</li>
-    <li>Juan Carlos Lope Pari</li>
-    <li>Emerson Mamani Ccallavilca</li>
-    <li>Bruce Saul Barrios Morales</li>
-  </ul>
-
-  <a href="pagina2.html">DOCENTE</a>
-
-  <p>
-    <img src="images/dibujos.png" alt="Imagen grupo">
-  </p>
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/nXSyPzIZl8U?si=Ibn-GJKmRCXjNGSG"
-    title="YouTube video player" allowfullscreen></iframe>
+    <div class="container">
+        <header>
+            <h1>Guía de Git con SourceForge</h1>
+            <p class="subtitle">Aprende a utilizar Git con SourceForge paso a paso</p>
+        </header>
+        
+        <div class="info-grid">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-user-plus"></i>
+                    <h2>Creación de Cuenta</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Ingresar a SourceForge</li>
+                        <li><i class="fas fa-check-circle"></i> Completar formulario de registro</li>
+                        <li><i class="fas fa-check-circle"></i> Proporcionar nombre completo, usuario, clave, empresa, etc.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2>Creación de Proyecto</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Asignar nombre al proyecto</li>
+                        <li><i class="fas fa-check-circle"></i> Seleccionar herramientas a utilizar</li>
+                        <li><i class="fas fa-check-circle"></i> Verificación con número de celular mediante PIN por SMS</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-users"></i>
+                    <h2>Gestión de Miembros</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Agregar colaboradores al proyecto</li>
+                        <li><i class="fas fa-check-circle"></i> Asignar diferentes roles (administrador, desarrollador, etc.)</li>
+                        <li><i class="fas fa-check-circle"></i> Control de acceso según roles asignados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-terminal"></i>
+                <h2>Comandos Git para Subir Proyecto</h2>
+            </div>
+            <div class="card-body">
+                <p><span class="step-number">1</span> Navegar al directorio del proyecto:</p>
+                <div class="command-box">cd myproject</div>
+                
+                <p><span class="step-number">2</span> Inicializar repositorio Git:</p>
+                <div class="command-box">git init</div>
+                
+                <p><span class="step-number">3</span> Agregar archivos al staging area:</p>
+                <div class="command-box">git add .</div>
+                
+                <p><span class="step-number">4</span> Crear commit inicial:</p>
+                <div class="command-box">git commit -a -m 'Initial commit'</div>
+                
+                <p><span class="step-number">5</span> Agregar repositorio remoto (usando SSH):</p>
+                <div class="command-box">git remote add origin ssh://rutihsoc@git.code.sf.net/p/gitsource/code</div>
+                
+                <p><span class="step-number">6</span> Subir cambios al repositorio remoto:</p>
+                <div class="command-box">git push -u origin master</div>
+            </div>
+        </div>
+        
+        <div class="note">
+            <h3><i class="fas fa-exclamation-circle"></i> Resolución de Problemas con SSH</h3>
+            <p>En caso de tener problemas con SSH, se recomienda utilizar HTTPS:</p>
+            <div class="command-box">git remote set-url origin https://git.code.sf.net/p/tu-proyecto/code</div>
+            <p>Luego volver a hacer push. Se abrirá una ventana emergente solicitando usuario y contraseña. Una vez insertados, el push se completará y los archivos estarán en el repositorio.</p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 - Infografía de Git con SourceForge</p>
+            <p>Para más información, visita la documentación oficial de SourceForge</p>
+        </div>
+    </div>
 </body>
 </html>
